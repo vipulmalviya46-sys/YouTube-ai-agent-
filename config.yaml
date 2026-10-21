@@ -1,0 +1,29 @@
+niche: "AI tools for creators"
+language: en
+region: US
+channel_voice: "Energetic, clear, a little witty. Short sentences. No fluff, no clickbait lies."
+competitor_channel_ids: []        # e.g. ["UCxxxx"] - used to find outlier videos in your niche
+
+format: long                      # long (16:9) | short (9:16)
+video_minutes: 8
+research_days: 14
+
+tts_provider: edge                # edge | elevenlabs
+tts_voice: en-US-AndrewNeural
+tts_rate: "+5%"
+elevenlabs_voice_id: ""
+music_path: ""                    # optional royalty-free track; auto-ducked under the voice
+
+privacy: private                  # private | unlisted | public  (first runs: keep private)
+require_approval: true            # true = pipeline stops at "ready"; you run `publish` after review
+declare_synthetic_media: true     # sets YouTube's "altered or synthetic content" flag
+category_id: "28"                 # 28 = Science & Technology
+
+auto_reply: false                 # false = comment replies go to an approval queue
+max_replies_per_run: 15
+reply_min_delay_s: 20
+reply_max_delay_s: 90
+
+daemon:
+  make_at: "09:00"                # local time, one video per day
+  engage_every_minutes: 60
